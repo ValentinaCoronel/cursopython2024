@@ -112,3 +112,4 @@ print(cadena_de_texto[-1])
 # 0 1 2 3 4 5 6 indices
 # -6 -5 -4 -3 -2 -1 indice inverso
 print (cadena_de_texto[-2])
+
