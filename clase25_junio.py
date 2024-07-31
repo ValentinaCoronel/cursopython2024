@@ -135,3 +135,5 @@ print(len(otra_tupla))
 print(otra_tupla.index(5))
 
 print(otra_tupla.count(1))
+
+#en la tupla no se puede usar el .append ya que no se puede mutar
