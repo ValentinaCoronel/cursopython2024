@@ -152,7 +152,103 @@ else :
     
 
 #Escribe un programa que muestre los números del 1 al 10 utilizando un bucle for.
-for num in (1,2,3,4,5,6,7,8,9,10):
-    print(num)
-    
 
+texto = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for numero in texto:
+    print(numero) 
+
+
+
+#Escribe un programa que calcule la suma de los números del 1 al 100 utilizando un bucle while
+suma = 0
+contador = 1
+while contador <= 100:
+    suma += contador
+    contador += 1
+print(suma)
+
+
+#Ejercicio 4: Conjuntos y Diccionarios
+#Crea dos conjuntos con algunos números. Luego:
+#Muestra la unión de los dos conjuntos.
+#Muestra la diferencia entre los dos conjuntos.
+#Muestra los elementos comunes en ambos conjuntos.
+
+conjunto_1 = {67 , 66 , 4 , 1 , 99}
+conjunto_2 = {67, 3, 34}
+
+conjunto_1.update(conjunto_2)
+print(conjunto_1)
+
+print(conjunto_1.difference(conjunto_2))
+print(conjunto_1.intersection(conjunto_2))
+
+#Crea un diccionario con tres nombres como claves y edades como valores. Luego:
+#Muestra la edad del primer nombre en el diccionario.
+#Añade un nuevo nombre y edad al diccionario.
+#Elimina un nombre del diccionario y muestra el resultado.
+#Muestra todas las claves y todos los valores del diccionario.
+
+diccionario = { "Ezequiel" : "19", "Nery" : "79", "Lidia" : "83"}
+print(diccionario["Ezequiel"])
+
+diccionario["Monica"] = 57
+print(diccionario)
+
+diccionario.pop("Ezequiel")
+
+print(diccionario)
+
+#Crea un diccionario con los nombres de cinco productos como claves y sus precios como valores. Luego:
+#Muestra el precio de un producto específico.
+#Incrementa el precio de todos los productos en un 10%.
+#Muestra el diccionario actualizado.
+
+productos = {"leche" : 100, "yerba" : 300, "azucar" : 50, "sal" : 20, "aceite" : 500}
+print(productos["aceite"]) 
+
+productos_actualizados = {producto: precio * 1.10 for producto, precio in productos.items()}
+
+print("Lista de precios actualizada con aumento de 10%:")
+for producto, precio in productos_actualizados.items():
+    print(f"{producto}: {precio:.2f}")
+
+
+#Crea un conjunto con los números del 1 al 5 y otro conjunto con los números del 4 al 8. Muestra:
+#La intersección de los dos conjuntos.
+#La diferencia simétrica entre los dos conjuntos.
+
+numeritos = {1, 2, 3, 4, 5}
+numerotes = {4, 5, 6, 7, 8}
+print(numeritos.intersection(numerotes))
+print(numeritos.difference(numerotes))
+print(numerotes.difference(numeritos))
+
+#Ejercicio 5: Funciones
+#Define una función saludar(nombre) que reciba un nombre y muestre un saludo. Luego llama a esta función con tu propio nombre.
+#Define una función suma(a, b) que reciba dos números y retorne su suma. Luego prueba la función con dos números diferentes.
+#Define una función es_mayor_de_edad(edad) que reciba una edad y retorne True si la edad es mayor o igual a 18 y False en caso contrario. Prueba la función con diferentes edades.
+
+
+def saludar (Ezequiel):
+    print("Hola Ezequiel como estas")
+    return saludar
+print("Hola Valentina como estas")
+
+def suma(a, b):
+    return a + b
+
+# Probar la función suma con dos números diferentes
+resultado_suma = suma(5, 7)
+print(f"La suma de 5 y 7 es: {resultado_suma}")
+
+# Definir una función es_mayor_de_edad que reciba una edad y retorne True o False
+def es_mayor_de_edad(edad):
+    return edad >= 18
+
+# Probar la función es_mayor_de_edad con diferentes edades
+edad1 = 20
+edad2 = 16
+
+print(f"¿La persona con {edad1} años es mayor de edad? {es_mayor_de_edad(edad1)}")
+print(f"¿La persona con {edad2} años es mayor de edad? {es_mayor_de_edad(edad2)}")
